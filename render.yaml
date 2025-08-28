@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: survey-app
+    env: docker   # BẮT BUỘC: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /
