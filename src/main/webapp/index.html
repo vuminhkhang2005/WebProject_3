@@ -51,7 +51,9 @@
 </head>
 <body>
 
-    <img src="resources/murachlogo.png" alt="Murach Logo">
+    <!-- Logo fix đường dẫn đúng từ web root -->
+    <img src="images/murachlogo.png" alt="Murach Logo">
+
     <h1>Survey</h1>
     <p>If you have a moment, we’d appreciate it if you would fill out this survey.</p>
 
@@ -60,16 +62,24 @@
         <div class="section-title">Your information:</div>
         <div class="form-section">
             <label for="fname">First Name *</label>
-            <input type="text" id="fname" name="fname" required><br>
+            <input type="text" id="fname" name="fname" required
+                   oninvalid="this.setCustomValidity('Please fill out First Name')"
+                   oninput="this.setCustomValidity('')"><br>
 
             <label for="lname">Last Name *</label>
-            <input type="text" id="lname" name="lname" required><br>
+            <input type="text" id="lname" name="lname" required
+                   oninvalid="this.setCustomValidity('Please fill out Last Name')"
+                   oninput="this.setCustomValidity('')"><br>
 
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required
+                   oninvalid="this.setCustomValidity('Please enter a valid Email')"
+                   oninput="this.setCustomValidity('')"><br>
 
             <label for="dob">Date of Birth *</label>
-            <input type="date" id="dob" name="dob" required><br>
+            <input type="date" id="dob" name="dob" required
+                   oninvalid="this.setCustomValidity('Please enter your Date of Birth')"
+                   oninput="this.setCustomValidity('')"><br>
         </div>
 
         <!-- How did you hear about us? -->
